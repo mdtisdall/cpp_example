@@ -1,11 +1,11 @@
 FROM mdtisdall/devenv_cpp
 
-WORKDIR /opt/app
+WORKDIR /opt/cpp_example
 
-ADD . /opt/app/
+ADD . /opt/cpp_example/
 
 RUN mkdir bin && \
     make && \
     make test
 
-CMD ["./bin/app_test"]
+CMD ["./bin/cpp_example_test"]
